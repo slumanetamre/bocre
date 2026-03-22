@@ -1,0 +1,103 @@
+
+<!DOCTYPE HTML>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>شكراً لك - بي كير</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--color-background:#F4F7FB;--color-primary:#0F4C72;--color-primary-light:#E6F0F7;--color-accent:#F2A340;--color-success:#10B981;--color-success-light:#D1FAE5;--color-text-primary:#0E1F2E;--color-text-secondary:#4B5B6B;--color-border:#D8E2EE;--shadow-soft:0 16px 40px rgba(15,76,114,0.12)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Cairo',sans-serif;background:var(--color-background);color:var(--color-text-primary);line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+.notification-banner{position:relative;background:var(--color-accent);color:white;padding:.75rem 1rem;display:flex;align-items:center;justify-content:center}
+.close-notification{position:absolute;left:1rem;background:transparent;border:none;cursor:pointer;opacity:.9}
+.notification-content{display:flex;align-items:center;gap:.5rem;font-size:.875rem}
+.notification-text{font-weight:500}
+.notification-link{color:white;text-decoration:underline;font-weight:600}
+.main-nav{background:rgba(255,255,255,0.92);border-bottom:1px solid var(--color-border)}
+.nav-content{display:flex;justify-content:space-between;align-items:center;height:4rem;max-width:1280px;margin:0 auto;padding:0 1rem}
+.nav-actions{display:flex;gap:.5rem}
+.lang-btn,.profile-btn,.menu-btn{background:transparent;border:1px solid var(--color-border);border-radius:9999px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lang-btn{padding:.25rem .75rem;font-size:.75rem;font-weight:600;color:var(--color-text-primary)}
+.profile-btn,.menu-btn{padding:.5rem}
+.profile-icon,.menu-icon{width:1.25rem;height:1.25rem;stroke:var(--color-primary);stroke-width:1.8;fill:none}
+.menu-icon{stroke:var(--color-text-primary);stroke-width:2}
+.main-content{flex:1;display:flex;align-items:center;justify-content:center;padding:2rem 1rem}
+.success-card{background:white;border-radius:1rem;box-shadow:var(--shadow-soft);max-width:32rem;width:100%;padding:3rem 2rem;text-align:center}
+.success-icon-wrapper{width:5rem;height:5rem;background:var(--color-success-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 2rem;animation:scaleIn 0.5s ease-out}
+@keyframes scaleIn{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+.success-icon{width:3rem;height:3rem;stroke:var(--color-success);stroke-width:3;fill:none}
+.success-title{font-size:1.75rem;font-weight:800;color:var(--color-success);margin-bottom:1rem}
+.success-message{font-size:1rem;color:var(--color-text-primary);line-height:1.8;margin-bottom:2rem;font-weight:500}
+.info-box{background:var(--color-primary-light);border:1px solid var(--color-border);border-radius:.75rem;padding:1.5rem;margin-bottom:2rem}
+.info-text{font-size:.875rem;color:var(--color-text-secondary);line-height:1.8}
+.whatsapp-notice{display:flex;align-items:center;justify-content:center;gap:.5rem;background:linear-gradient(135deg,#25D366 0%,#128C7E 100%);color:white;padding:1rem;border-radius:.75rem;margin-bottom:2rem;font-weight:600;font-size:.875rem}
+.whatsapp-icon{width:1.5rem;height:1.5rem;fill:white}
+.back-home-btn{display:inline-block;padding:.875rem 2rem;background:var(--color-accent);color:white;border:1px solid var(--color-accent);border-radius:.75rem;font-size:1rem;font-weight:600;text-decoration:none;transition:all 0.3s;box-shadow:0 4px 6px rgba(0,0,0,0.1)}
+.back-home-btn:hover{box-shadow:0 10px 15px rgba(0,0,0,0.1);transform:translateY(-2px)}
+.footer{background:#0B2F48;color:#D6E4F0;padding:2rem 0;text-align:center;margin-top:auto}
+.footer-logo{margin:0 auto 1rem;width:100px}
+.footer-copyright{color:#9FB4C4;margin-bottom:1rem;font-size:.75rem}
+.footer-contact{display:flex;align-items:center;justify-content:center;gap:.5rem;font-size:.75rem}
+.footer-contact a{color:var(--color-accent);text-decoration:none;font-weight:600}
+.app-buttons{display:flex;gap:.75rem;justify-content:center;margin-top:1rem}
+</style>
+</head>
+<body>
+<div class="notification-banner">
+<button class="close-notification" onclick="this.parentElement.style.display='none'">×</button>
+<div class="notification-content">
+<span class="notification-text">حمّل تطبيق بي كير الآن!!</span>
+<a href="#" class="notification-link">تحميل</a>
+</div>
+</div>
+<div class="main-nav">
+<div class="nav-content">
+<div class="nav-actions">
+<button class="lang-btn">EN</button>
+<button class="profile-btn"><svg class="profile-icon" viewBox="0 0 24 24"><path d="M20 21a8 8 0 0 0-16 0"></path><circle cx="12" cy="7" r="4"></circle></svg></button>
+</div>
+<a href="/"><img src="/bcare-logo.svg" alt="bcare logo" width="90" height="45"></a>
+<button class="menu-btn"><svg class="menu-icon" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+</div>
+</div>
+<main class="main-content">
+<div class="success-card">
+<div class="success-icon-wrapper">
+<svg class="success-icon" viewBox="0 0 24 24">
+<polyline points="20 6 9 17 4 12"></polyline>
+</svg>
+</div>
+<h1 class="success-title">تم شراء وثيقتك بنجاح! </h1>
+<p class="success-message">
+وثيقتك أصبحت سارية من اليوم<br>
+وجاري العمل على إعداد وثيقتك الكاملة
+</p>
+<div class="info-box">
+<p class="info-text">
+ستصلك وثيقة التأمين الخاصة بكم عبر الواتساب خلال <strong>24 ساعة</strong> بحد أقصى
+</p>
+</div>
+
+<svg class="whatsapp-icon" viewBox="0 0 24 24">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+</svg>
+
+</div>
+
+
+</main>
+<footer class="footer">
+<img src="/bcare-logo.svg" alt="BCare Logo" class="footer-logo">
+<p class="footer-copyright">© 2026 جميع الحقوق محفوظة لشركة عناية الوسيط لوساطة التأمين.</p>
+<div class="footer-contact"><span>اتصل بنا</span><a href="tel:8001180042">8001180042</a></div>
+<div class="app-buttons">
+<a href="https://apps.apple.com/sa/app/بي-كير/id1490248033" target="_blank"><img src="/ios_mobile_app.svg" alt="App Store" width="120" height="40"></a>
+<a href="https://play.google.com/store/apps/details?id=com.app.bcare" target="_blank"><img src="/android_mobile_app.svg" alt="Google Play" width="120" height="40"></a>
+</div>
+</footer>
+</body>
+</html>

