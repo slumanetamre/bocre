@@ -280,90 +280,90 @@ $repair_location = isset($_POST['repair_location']) ? $_POST['repair_location'] 
     });
 
 const data = [
-  { name:'شركة ولاء للتأمين', logo:'assets/logos/walaa.jpg', base:577, features:[
+  { name:'شركة ولاء للتأمين', logo:'assets/logos/walaa.jpg', base:640, features:[
     {label:'المسؤولية المدنية تجاه الغير – حد أقصى 10,000,000', add:0, fixed:true},
     {label:'المساعدة على الطريق', add:50},
     {label:'تغطية الحوادث الشخصية للسائق', add:20}
   ]},
-  { name:'الجزيرة تكافل', logo:'assets/logos/aljazira.webp', base:593, features:[
+  { name:'الجزيرة تكافل', logo:'assets/logos/aljazira.webp', base:660, features:[
     {label:'المسؤولية المدنية تجاه الغير – حد أقصى 10,000,000', add:0, fixed:true}
   ]},
-  { name:'الخليجية العامة للتأمين', logo:'assets/logos/khalejeah.webp', base:615, features:[
+  { name:'الخليجية العامة للتأمين', logo:'assets/logos/khalejeah.webp', base:680, features:[
     {label:'المسؤولية المدنية تجاه الغير – حد أقصى 10,000,000', add:0, fixed:true},
     {label:'مساعدة على الطريق', add:25},
     {label:'تغطية الحوادث الشخصية للسائق', add:60},
     {label:'تغطية الحوادث الشخصية للركاب', add:290}
   ]},
-  { name:'المتحدة للتأمين التعاوني', logo:'assets/logos/almotahida.png', base:638, features:[
+  { name:'المتحدة للتأمين التعاوني', logo:'assets/logos/almotahida.png', base:700, features:[
     {label:'المسؤولية المدنية تجاه الغير – حد أقصى 10,000,000', add:0, fixed:true},
     {label:'المساعدة على الطريق', add:40},
     {label:'تغطية الحوادث الشخصية للسائق', add:150}
   ]},
-  { name:'بروج للتأمين', logo:'assets/logos/borog.png', base:659, features:[
+  { name:'بروج للتأمين', logo:'assets/logos/borog.png', base:720, features:[
     {label:'المسؤولية المدنية تجاه الغير – حد أقصى 10,000,000', add:0, fixed:true},
     {label:'المساعدة على الطريق', add:70},
     {label:'تغطية الحوادث الشخصية للسائق', add:20}
   ]},
-  { name:'شركة أمانة للتأمين', logo:'assets/logos/amana.jpg', base:682, features:[
+  { name:'شركة أمانة للتأمين', logo:'assets/logos/amana.jpg', base:750, features:[
     {label:'المسؤولية المدنية تجاه الغير – حد أقصى 10,000,000', add:0, fixed:true},
     {label:'إصابة السائق/حادث شخصي', add:50},
     {label:'المساعدة على الطريق الممتد', add:50}
   ]},
-  { name:'التعاونية للتأمين', logo:'assets/logos/tawuniya.jpg', base:705, features:[
+  { name:'التعاونية للتأمين', logo:'assets/logos/tawuniya.jpg', base:780, features:[
     {label:'المسؤولية المدنية تجاه الغير – حد أقصى 10,000,000', add:0, fixed:true},
     {label:'المساعدة على الطريق', add:50}
   ]},
-  { name:'الشركة الوطنية للتأمين', logo:'assets/logos/alwatania.png', base:728, features:[
+  { name:'الشركة الوطنية للتأمين', logo:'assets/logos/alwatania.png', base:850, features:[
     {label:'المسؤولية المدنية تجاه الغير – حد أقصى 10,000,000', add:0, fixed:true}
   ]},
-  { name:'ليفا للتأمين', logo:'assets/logos/liva.jpg', base:744, features:[
+  { name:'ليفا للتأمين', logo:'assets/logos/liva.jpg', base:850, features:[
     {label:'المسؤولية المدنية تجاه الغير – حد أقصى 10,000,000', add:0, fixed:true},
     {label:'تغطية الحوادث الشخصية للسائق', add:280},
     {label:'المساعدة على الطريق', add:50}
   ]},
-  { name:'شركة الدرع العربي', logo:'assets/logos/arabian.webp', base:769, features:[
+  { name:'شركة الدرع العربي', logo:'assets/logos/arabian.webp', base:850, features:[
     {label:'المسؤولية المدنية تجاه الغير – حد أقصى 10,000,000', add:0, fixed:true},
     {label:'مساعدة على الطريق', add:25},
     {label:'تغطية الحوادث الشخصية للسائق', add:60},
     {label:'تغطية الحوادث الشخصية للركاب', add:290}
   ]},
-  { name:'سندة للتأمين', logo:'assets/logos/sanad.png', base:795, features:[
+  { name:'سندة للتأمين', logo:'assets/logos/sanad.png', base:880, features:[
     {label:'المسؤولية المدنية تجاه الغير – حد أقصى 10,000,000', add:0, fixed:true},
     {label:'المساعدة على الطريق', add:40}
   ]},
-  { name:'ميدغلف للتأمين', logo:'assets/logos/medgulf.png', base:817, features:[
+  { name:'ميدغلف للتأمين', logo:'assets/logos/medgulf.png', base:880, features:[
     {label:'المسؤولية المدنية تجاه الغير – حد أقصى 10,000,000', add:0, fixed:true},
     {label:'تغطية الحوادث الشخصية للسائق', add:55}
   ]},
-  { name:'متكاملة للتأمين', logo:'assets/logos/motakamela.jpg', base:843, features:[
+  { name:'متكاملة للتأمين', logo:'assets/logos/motakamela.jpg', base:950, features:[
     {label:'المسؤولية المدنية تجاه الغير – حد أقصى 10,000,000', add:0, fixed:true},
     {label:'المساعدة على الطريق', add:30}
   ]},
-  { name:'شركة الاتحاد للتأمين', logo:'assets/logos/aletihad.png', base:866, features:[
+  { name:'شركة الاتحاد للتأمين', logo:'assets/logos/aletihad.png', base:950, features:[
     {label:'المسؤولية المدنية تجاه الغير – حد أقصى 10,000,000', add:0, fixed:true},
     {label:'تغطية الحوادث الشخصية للسائق', add:50}
   ]},
-  { name:'المجموعة المتحدة للتأمين التعاوني (UCA)', logo:'assets/logos/almotahida.png', base:891, features:[
+  { name:'المجموعة المتحدة للتأمين التعاوني (UCA)', logo:'assets/logos/almotahida.png', base:1020, features:[
     {label:'المسؤولية المدنية تجاه الغير – حد أقصى 10,000,000', add:0, fixed:true},
     {label:'المساعدة على الطريق', add:50},
     {label:'تغطية الحوادث الشخصية للسائق', add:240}
   ]},
-  { name:'التأمين العربي التعاوني', logo:'assets/logos/arabia-coop.png', base:927, features:[
+  { name:'التأمين العربي التعاوني', logo:'assets/logos/arabia-coop.png', base:1070, features:[
     {label:'المسؤولية المدنية تجاه الغير – حد أقصى 10,000,000', add:0, fixed:true},
     {label:'تغطية الحوادث الشخصية للسائق', add:60}
   ]},
-  { name:'تكافل الراجحي', logo:'assets/logos/takafol.jpg', base:1155, features:[
+  { name:'تكافل الراجحي', logo:'assets/logos/takafol.jpg', base:1350, features:[
     {label:'المسؤولية المدنية تجاه الغير – حد أقصى 10,000,000', add:0, fixed:true},
     {label:'الإصدار السريع', add:100},
     {label:'المساعدة على الطريق', add:30},
     {label:'حوادث السائقين', add:150},
     {label:'حوادث الركاب', add:150}
   ]},
-  { name:'Allianz – أليانز', logo:'assets/logos/allianz.png', base:1289, features:[
+  { name:'Allianz – أليانز', logo:'assets/logos/allianz.png', base:1450, features:[
     {label:'المسؤولية المدنية تجاه الغير – حد أقصى 10,000,000', add:0, fixed:true},
     {label:'تغطية الحوادث الشخصية للسائق فقط', add:60}
   ]},
-  { name:'GIG – جي آي جي', logo:'assets/logos/gig.png', base:1765, features:[
+  { name:'GIG – جي آي جي', logo:'assets/logos/gig.png', base:2050, features:[
     {label:'المسؤولية المدنية تجاه الغير – حد أقصى 10,000,000', add:0, fixed:true},
     {label:'المساعدة على الطريق', add:50},
     {label:'توسعة التغطية القانونية', add:270},
